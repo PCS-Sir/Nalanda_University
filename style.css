@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    padding: 12px;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 15px;
+}
+
+nav ul li a {
+    color: rgb(74, 74, 74);
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.6;
+}
+
+#main-image {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: fixed;
+    z-index: 1;
+}
+
+.heading-div {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+#main-heading {
+    color: white;
+    background-color: transparent;
+    font-size: 120px;
+    text-shadow: 2px 2px 6px #8b8b8b;
+    align-self: center;
+}
+
+
+.after-image {
+    margin-top: 100vh;
+    height: 800px;
+    width: 100vw;
+    z-index: 3;
+}
+
+.black-section {
+    background-color: black;
+    color: white;
+    padding: 100px 0;
+}
+
+.white-section {
+    background-color: white;
+    color: black;
+    padding: 100px 0;
+}
+
+.history-section {
+    margin-top: 100vh;
+    padding: 100px;
+    z-index: 3;
+}
+
+#history-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px
+}
+
+#uoa-image {
+    flex: 1;
+}
+
+#nalanda-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+#uoa-about {
+    flex: 2;
+    padding: 30px;
+}
+
+#history-heading {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#history-text {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+#history-button {
+    padding: 12px 26px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: none;
+    transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+#history-button:hover {
+    opacity: 0.8;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#history-button:active {
+    opacity: 0.6;
+}
+
+.card-black {
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+
+.facility-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 420px;
+    width: 350px;
+    opacity: 1;
+    border-radius: 4px;
+    transition: opacity 0.4s, box-shadow 0.3s;
+    background-color: rgb(37, 37, 37);
+}
+
+.facility-card:hover {
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.228);
+    opacity: 0.8;
+}
+
+.facility-image {
+    height: 260px;
+    width: 100%;
+}
+
+.facility-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.facility-text {
+    height: 160px;
+    padding: 20px 15px;
+}
+
+.facility-text h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.facility-text p {
+    line-height: 22px;
+}
+
+.footer-white {
+    z-index: 3;
+    padding: 50px 100px;
+    z-index: 3;
+}
+
+#quick-link-heading {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.quick-link-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-list {
+    width: 250px;
+}
+
+.link-list ul {
+    list-style-type: none;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.footer-end {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 100px
+}
+
+#copyright {
+    flex: 1;
+}
+
+#au-logo {
+    flex: 1;
+}
+
+#au-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+#social-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-link {
+    height: 30px;
+    width: 30px;
+}
+
+.social-link img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+

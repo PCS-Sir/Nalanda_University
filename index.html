@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <nav>
+          <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about/index.html">About</a></li> 
+              <li><a href="./departments/index.html">Departments</a></li>
+              <li><a href="./faculty/index.html">Faculty</a></li>
+              <li><a href="./alumni/index.html">Alumni</a></li>
+              <li><a href="./reach-us/index.html">Reach us</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <img id="main-image" src="Nalanda.webp">
+    <div class="heading-div">
+        <h1 id="main-heading">Nalanda</h1>
+    </div>
+
+    <section class="white-section history-section">
+      <div id="history-content">
+          <div id="uoa-image">
+              <img id="nalanda-image" src="nalanda-image.jpg">
+          </div>
+          <div id="uoa-about">
+              <h2 id="history-heading">A Beacon of Learning</h2>
+              <p id="history-text">The University of Allahabad, established on September 23, 1887, is the fourth oldest university in India. Initiated by Sir William Muir, the then Lieutenant Governor of the United Provinces, it began as the Muir Central College and evolved into a degree-conferring institution. Over the years, the university has expanded its jurisdiction and affiliation, incorporating various colleges across the United Provinces.</p>
+              <button id="history-button">Learn more</button>
+          </div>
+      </div>
+    </section>
+
+    <section class="black-section card-black">
+      <div class="facility-card">
+          <div class="facility-image">
+              <img src="lab.jpg">
+          </div>
+          <div class="facility-text">
+              <h1>Pioneering Laboratory</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur. Magni velit reiciendis sed neque error sapiente, totam laboriosam, fuga.</p>
+          </div>
+      </div>
+
+      <div class="facility-card">
+          <div class="facility-image">
+              <img src="library.webp">
+          </div>
+          <div class="facility-text">
+              <h1>Pioneering Laboratory</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur. Magni velit reiciendis sed neque error sapiente, totam laboriosam, fuga.</p>
+          </div>
+      </div>
+
+      <div class="facility-card">
+          <div class="facility-image">
+              <img src="lecture-hall.jpg">
+          </div>
+          <div class="facility-text">
+              <h1>Pioneering Laboratory</h1>
+              <p>Lorem ipsum, dolor sit amet consectetur. Magni velit reiciendis sed neque error sapiente, totam laboriosam, fuga.</p>
+          </div>
+      </div>
+    </section>
+
+    <footer class="white-section footer-white">
+      <h1 id="quick-link-heading">Quick Links</h1>
+      <div class="quick-link-list">
+          <div class="link-list">
+              <ul>
+                  <li>first</li>
+                  <li>second</li>
+                  <li>third</li>
+                  <li>fourth</li>
+                  <li>second</li>
+                  <li>second</li>
+              </ul>
+          </div>
+          <div class="link-list">
+              <ul>
+                  <li>first</li>
+                  <li>second</li>
+                  <li>third</li>
+                  <li>fourth</li>
+                  <li>second</li>
+                  <li>second</li>
+              </ul>
+          </div>
+          <div class="link-list">
+              <ul>
+                  <li>first</li>
+                  <li>second</li>
+                  <li>third</li>
+                  <li>fourth</li>
+                  <li>second</li>
+                  <li>second</li>
+              </ul>
+          </div>
+          <div class="link-list">
+              <ul>
+                  <li>second</li>
+                  <li>fourth</li>
+                  <li>first</li>
+                  <li>third</li>
+                  <li>fourth</li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-end">
+          <span id="copyright">&copyCopyright of University of Allahabad</span>
+          <div id="au-logo"><img src="Nalanda_University_Logo.png"></div>
+          <div id="social-media">
+              <div class="social-link"><img src="fb-logo.jpg"></div>
+              <div class="social-link"><img src="twitter-logo.webp"></div>
+              <div class="social-link"><img src="insta-logo.png"></div>
+          </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      let scrollPosition = window.scrollY;
+      console.log(scrollPosition)
+
+      document.querySelector("img").style.height = `calc(100vh - ${scrollPosition}px)`
+      document.querySelector("h1").style.top = `calc(40vh + ${scrollPosition}px)`
+
+      if(scrollPosition >= 0 && scrollPosition < 720) {
+        document.querySelectorAll("a").forEach(a => {
+            a.style.color = "rgb(74, 74, 74)"
+        })
+        document.querySelector(".navbar").style.backgroundColor = "transparent"
+        document.querySelector(".navbar").style.boxShadow = "none"
+      }
+
+      if(scrollPosition >= 720) {
+        document.querySelectorAll("a").forEach(a => {
+            a.style.color = "black"
+        })
+        document.querySelector(".navbar").style.backgroundColor = "white"
+        document.querySelector(".navbar").style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.2)"
+      }
+    })
+  </script>
+</body>
+</html>
