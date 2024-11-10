@@ -58,7 +58,26 @@
     opacity: 0.6;
 }
 
-.faculty-cards {
+.department-accordian {
     z-index: 1;
     margin: 240px 150px 100px;
 }
+
+.link-container {
+    margin-top: 15px; /* Adds space above the entire link section */
+  }
+
+.department-link {
+    text-decoration: none; /* Removes underline */
+    font-size: 0.9rem; /* Smaller font size */
+    color: #007bff; /* Adjust color as desired */
+  }
+
+  .department-link:first-of-type {
+    margin-top: 30px; /* Adds space above the first link */
+  }
+  
+  .department-link:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+  }
+  

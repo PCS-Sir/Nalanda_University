@@ -63,10 +63,34 @@
     margin: 240px 150px 100px;
 }
 
-#container3D canvas {
+/* #container3D canvas {
     width: 100vw !important;
     height: 100vh !important;
     position: absolute;
     top: 0;
     left: 0;
+} */
+
+.about-section h2, .about-section h3 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
 }
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.about-section img {
+    max-width: 60%; /* Adjust as needed to control the width */
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto; /* Center the images */
+    display: block;
+  }
+  

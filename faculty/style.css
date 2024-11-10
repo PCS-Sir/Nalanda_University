@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.department-container {
+.faculty-container {
     min-height: 100vh;
     width: 100vw;
     display: flex;
@@ -58,13 +58,13 @@
     opacity: 0.6;
 }
 
-.department-cards {
+.faculty-cards {
     z-index: 1;
     /* background-color: blue; */
     margin: 240px 150px 100px;
 }
 
-.department-image {
+.faculty-image {
     height: 200px;
     width: 100%;
     object-fit: cover;
