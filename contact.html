@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nalanda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <!-- <a href="index.html"><img src="images/logo.png"></a> -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li class="dropdown">
+                        <a href="academics.html">ACADEMICS</a>
+                        <div class="dropdown-content">
+                            <a href="science.html">Faculty of Science</a>
+                            <a href="engineering.html">Faculty of Engineering</a>
+                            <a href="arts.html">Faculty of Arts</a>
+                            <a href="law.html">Faculty of Law</a>
+                            <a href="commerce.html">Faculty of Commerce</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+
+
+    <!------- Contact Us ------->
+
+
+    <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115694.43209337717!2d85.22709039726563!3d25.01876419999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2e564bc00e413%3A0x5046ed92e53b0deb!2sNalanda%20University!5e0!3m2!1sen!2sin!4v1740279013980!5m2!1sen!2sin"
+            width="720" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Rajgir, Bihar, India</h5>
+                        <p>Nalanda University, an International Institution of Learning</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+91 XXXXXXXXXX</h5>
+                        <p>Monday to Friday, 9 AM to 5 PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>info@nalandauniv.edu.in</h5>
+                        <p>Reach out to us for inquiries</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="contact-col">
+                <form method="post">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="email" name="email" placeholder="Enter email address" required>
+                    <input type="text" name="subject" placeholder="Enter your subject" required>
+                    <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-------- footer ---------->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Nalanda University continues the legacy of its ancient predecessor, blending traditional wisdom with modern
+            innovation. We are committed to academic excellence, cultural diversity, and sustainable development through
+            education and research.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+
+
+    <!----JavaScript for toggle menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
