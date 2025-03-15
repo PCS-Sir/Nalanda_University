@@ -147,6 +147,21 @@
     function hideMenu() {
       navLinks.style.right = "-200px";
     }
+
+    // Handle academics link click on mobile
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check if we're on mobile
+      const isMobile = window.innerWidth <= 700;
+
+      if (isMobile) {
+        const academicsLink = document.querySelector('.dropdown > a');
+
+        academicsLink.addEventListener('click', function (e) {
+          // Navigate to academics.html instead of showing dropdown
+          window.location.href = 'academics.html';
+        });
+      }
+    });
   </script>
 
 </body>
