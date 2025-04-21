@@ -1,0 +1,1610 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 135px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #333 !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 14px !important;
+  border-bottom: 1px solid #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+  color: #f44336 !important;
+  padding-left: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Adjust dropdown for mobile */
+@media (max-width: 700px) {
+  .dropdown-content {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    min-width: 100%;
+    padding-left: 30px;
+    display: block !important;
+  }
+
+  .dropdown-content a {
+    color: #fff !important;
+    border-bottom: none;
+    padding: 8px 0;
+    font-size: 12px !important;
+    opacity: 0.9;
+  }
+
+  .dropdown-content a:hover {
+    background-color: transparent;
+    color: #fff !important;
+  }
+
+  .nav-links .dropdown > a {
+    font-weight: 600;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .nav-links .dropdown .dropdown-content a {
+    padding-left: 15px;
+    position: relative;
+  }
+
+  .nav-links .dropdown .dropdown-content a:before {
+    content: "- ";
+    position: absolute;
+    left: 0;
+  }
+}
+
+nav .fa {
+  display: none;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 62px;
+}
+.text-box p {
+  margin: 20px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.hero-btn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+}
+
+@media (max-width: 700px) {
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.5s;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .text-box h1 {
+    font-size: 20px;
+  }
+}
+
+/* research */
+
+.research {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.research h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #333;
+  text-align: center;
+}
+
+.research .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.featured-research {
+  flex-basis: 55%;
+  position: relative;
+}
+
+.featured-research img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  height: 350px;
+}
+
+.featured-content {
+  margin-top: 20px;
+}
+
+.featured-content h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left;
+}
+
+.research-list {
+  flex-basis: 40%;
+}
+
+.research-item {
+  margin-bottom: 15px;
+}
+
+.research-item h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #333;
+}
+
+.research-date {
+  font-size: 14px;
+  color: #777;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.research-divider {
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 20px 0;
+}
+
+@media (max-width: 700px) {
+  .research h1 {
+    text-align: center;
+  }
+
+  .research .row {
+    flex-direction: column;
+  }
+
+  .featured-research,
+  .research-list {
+    flex-basis: 100%;
+  }
+
+  .featured-research img {
+    height: 250px;
+  }
+}
+
+/*---------- course --------*/
+
+.course {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-col {
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.course-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/*---------------- campus ----------------*/
+
+.campus {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.campus-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.campus-col img {
+  width: 100%;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.5s;
+}
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
+}
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+/*-------------- Facilities ----------------*/
+
+.facility {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.facility-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.facility-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+.facility-col p {
+  padding: 0;
+}
+.facility-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/*---------------- testimonials ------------------*/
+
+.testimonials {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.testimonial-col {
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: #fff3f3;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
+}
+.testimonial-col img {
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.testimonial-col p {
+  padding: 0;
+}
+.testimonial-col h3 {
+  margin-top: 15px;
+  text-align: left;
+}
+.testimonial-col .fa {
+  color: #f44336;
+}
+
+@media (max-width: 700px) {
+  .testimonial-col img {
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+}
+
+/*-------- Call To Action ----------*/
+
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.cta h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .cta h1 {
+    font-size: 24px;
+  }
+}
+
+/*--------------Footer---------------*/
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.icons .fa {
+  color: #f44336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+.fa-heart-o {
+  color: #f44336;
+}
+
+.footer p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/*--------------- About Us Page --------------*/
+
+.sub-header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.sub-header h1 {
+  margin-top: 100px;
+}
+.about-us {
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.about-col {
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+.about-col h1 {
+  padding-top: 0;
+}
+.about-col p {
+  padding: 15px 0 25px;
+}
+
+.hero-btn.red-btn {
+  border: 1px solid #f44336;
+  background: transparent;
+  color: #f44336;
+}
+.hero-btn.red-btn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  color: #fff;
+}
+.hero-btn.red-btn::after {
+  background: #f44336;
+}
+.hero-btn.red-btn::before {
+  background: #f44336;
+}
+.content-image {
+  flex-basis: 50%;
+}
+.about-col img {
+  width: 100%;
+}
+
+/*---------- Blog Page -------------*/
+
+.blog-content {
+  width: 80%;
+  margin: auto;
+  padding: 60px 0;
+}
+.blog-left {
+  flex-basis: 65%;
+}
+.blog-right {
+  flex-basis: 32%;
+}
+.blog-left img {
+  width: 100%;
+}
+.blog-left h2 {
+  color: #222;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.blog-left p {
+  color: #999;
+  padding: 0;
+}
+
+.blog-right h3 {
+  background: #f44336;
+  color: #fff;
+  padding: 7px 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.blog-right div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #555;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.comment-box {
+  border: 1px solid #ccc;
+  margin: 50px 0;
+  padding: 10px 20px;
+}
+
+.comment-box h3 {
+  text-align: left;
+}
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: #f0f0f0;
+}
+.comment-form button {
+  margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+  .sub-header h1 {
+    font-size: 24px;
+  }
+}
+
+/*------- Contact Us Page ------------*/
+
+.location {
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+}
+.location iframe {
+  width: 100%;
+}
+
+.contact-us {
+  width: 80%;
+  margin: auto;
+}
+.contact-col {
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+
+.contact-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-col div .fa {
+  font-size: 28px;
+  color: #f44336;
+  margin: 10px;
+  margin-right: 30px;
+}
+
+.contact-col div p {
+  padding: 0;
+}
+.contact-col div h5 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 400;
+}
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #777;
+}
+
+/*---------- Academics Page -------------*/
+
+.academics-content {
+  width: 80%;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.academics-layout {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  gap: 80px;
+  position: relative;
+}
+
+.academics-layout:after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.academics-main {
+  flex: 3;
+}
+
+.academics-main h2 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.academics-main p {
+  color: #555;
+  padding: 0;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.academics-main p:last-child {
+  margin-bottom: 0;
+}
+
+.academics-sidebar {
+  flex: 0.8;
+  border-left: 1px solid #e5e5e5;
+  padding-left: 30px;
+  margin-top: 10px;
+}
+
+.sidebar-link {
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 5px;
+}
+
+.sidebar-link:first-child {
+  padding-top: 0;
+}
+
+.sidebar-link:last-child {
+  border-bottom: none;
+}
+
+.sidebar-link a {
+  text-decoration: none;
+  color: #0e4c92;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+  position: relative;
+  padding-left: 5px;
+  white-space: nowrap;
+}
+
+.sidebar-link a:hover {
+  color: #f44336;
+  transform: translateX(5px);
+}
+
+.sidebar-link a:after {
+  content: "→";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link a:hover:after {
+  opacity: 1;
+  right: -10px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f44336;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.academics-departments {
+  margin-top: 0;
+  background-color: #f9f9f9;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.department-row {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.department-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.department-col {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.department-col:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+}
+
+.department-col img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.department-content {
+  flex: 1;
+}
+
+.department-content h3 {
+  color: #0e4c92;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-align: left;
+}
+
+.department-content p {
+  color: #555;
+  padding: 0;
+  margin-bottom: 25px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.department-content .hero-btn {
+  display: inline-block;
+  margin-top: 0;
+  background-color: transparent;
+  color: #f44336;
+  border: 1px solid #f44336;
+  padding: 10px 25px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.department-content .hero-btn:hover {
+  background-color: #f44336;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+}
+
+@media (max-width: 900px) {
+  .academics-layout {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .academics-sidebar {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 30px;
+  }
+
+  .academics-departments {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .academics-sidebar {
+    display: none;
+  }
+
+  .academics-layout {
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+
+  .academics-layout:after {
+    bottom: -20px;
+  }
+
+  .academics-content {
+    padding: 20px 0;
+    width: 90%;
+  }
+
+  .academics-main h2 {
+    margin-bottom: 15px;
+  }
+
+  .academics-main p {
+    margin-bottom: 15px;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+  }
+
+  .academics-departments {
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  .department-row {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  .department-left,
+  .department-right {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+
+  .department-right {
+    margin-top: 30px;
+  }
+
+  /* Improved mobile styling for faculty cards */
+  .program-box {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .program-box h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .program-box p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+
+  .department-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .dept-link {
+    padding: 5px 0;
+    font-size: 15px;
+  }
+
+  /* Improve news items spacing on mobile */
+  .news-item {
+    padding: 10px 8px;
+    margin-bottom: 10px;
+  }
+
+  .news-item p {
+    line-height: 1.4;
+    font-size: 14px;
+  }
+
+  .highlights-box {
+    padding: 15px;
+  }
+
+  /* Additional mobile improvements */
+  .department-content {
+    width: 90%;
+    padding: 0;
+  }
+
+  .department-left h2 {
+    font-size: 24px;
+  }
+
+  .department-left h3,
+  .department-right h3 {
+    font-size: 20px;
+    margin: 20px 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller screens */
+  .program-box {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .department-links {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .dept-link {
+    font-size: 14px;
+  }
+
+  .department-content {
+    width: 95%;
+    padding: 0;
+  }
+
+  .highlights-box {
+    padding: 12px;
+  }
+
+  .news-item {
+    padding: 8px 5px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Faculty Content Page */
+.department-content {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.department-content .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.department-left {
+  flex-basis: 65%;
+  padding-right: 30px;
+}
+
+.department-right {
+  flex-basis: 30%;
+}
+
+.department-left img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.department-left h2 {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.department-left h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: #f44336;
+}
+
+.department-left h3,
+.department-right h3 {
+  color: #222;
+  font-weight: 500;
+  margin: 20px 0 12px;
+}
+
+.program-box {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.program-box h4 {
+  color: #f44336;
+  margin-bottom: 10px;
+}
+
+.research-list {
+  padding-left: 20px;
+}
+
+.research-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.research-list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f44336;
+}
+
+.highlights-box,
+.career-box,
+.testimonial-box,
+.cta-box {
+  background: #f9f9f9;
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.highlights-box p {
+  margin-bottom: 8px;
+}
+
+.highlights-box i {
+  color: #f44336;
+  margin-right: 10px;
+}
+
+.career-box ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.career-box li {
+  margin-bottom: 8px;
+}
+
+.testimonial-box {
+  background: #fff9f9;
+  border-left: 4px solid #f44336;
+}
+
+.testimonial-author {
+  text-align: right;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #333;
+  text-align: center;
+}
+
+.cta-box h3 {
+  color: #333;
+}
+
+.cta-box .hero-btn {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .department-left,
+  .department-right {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+
+  .department-right {
+    margin-top: 30px;
+  }
+}
+
+/* Add styles for news items in the commerce page */
+.news-item {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-bottom: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item:hover {
+  transform: translateX(5px);
+}
+
+.news-item p {
+  margin: 0;
+}
+
+.news-item strong {
+  color: #f44336;
+}
+
+.news-item i {
+  color: #f44336;
+  margin-right: 8px;
+}
+
+/* Department links styles */
+.department-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+
+.dept-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #0e4c92;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.dept-link:hover {
+  color: #f44336;
+}
+
+.syllabus-link {
+  color: #0e4c92;
+}
+
+.syllabus-link:hover {
+  color: #f44336;
+}
+
+/* Program box styling */
+.program-box p {
+  margin-bottom: 25px;
+}
+
+.program-box .hero-btn {
+  display: inline-block;
+}
+
+.program-details {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .department-col {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .department-col img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .academics-main h2 {
+    font-size: 24px;
+  }
+
+  .sidebar-link a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .department-left,
+  .department-right {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+
+  .department-right {
+    margin-top: 30px;
+  }
+
+  /* Improved mobile styling for faculty cards */
+  .program-box {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .program-box h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .program-box p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+
+  .department-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+
+  .dept-link {
+    padding: 5px 0;
+    font-size: 15px;
+  }
+
+  /* Improve news items spacing on mobile */
+  .news-item {
+    padding: 10px 8px;
+    margin-bottom: 10px;
+  }
+
+  .news-item p {
+    line-height: 1.4;
+    font-size: 14px;
+  }
+
+  .highlights-box {
+    padding: 15px;
+  }
+
+  /* Additional mobile improvements */
+  .department-content {
+    width: 90%;
+    padding: 0;
+  }
+
+  .department-left h2 {
+    font-size: 24px;
+  }
+
+  .department-left h3,
+  .department-right h3 {
+    font-size: 20px;
+    margin: 20px 0 15px;
+  }
+}
+
+/* Syllabus Page Styles */
+.syllabus-container {
+  width: 80%;
+  margin: auto;
+  padding: 60px 0;
+}
+
+.syllabus-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.syllabus-header h2 {
+  color: #0e4c92;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.syllabus-header p {
+  color: #555;
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.semester-box {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.semester-box h3 {
+  color: #f44336;
+  font-size: 22px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.course-table th {
+  background-color: #0e4c92;
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+}
+
+.course-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.course-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.course-table tr:hover {
+  background-color: #e9f0f9;
+}
+
+.course-code {
+  font-weight: 600;
+  color: #0e4c92;
+  width: 120px;
+}
+
+.course-title {
+  font-weight: 500;
+  color: #333;
+}
+
+.course-credits {
+  width: 100px;
+  text-align: center;
+}
+
+.course-type {
+  width: 150px;
+}
+
+.syllabus-note {
+  background-color: #fff3f3;
+  padding: 15px;
+  border-left: 4px solid #f44336;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.syllabus-note p {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #0e4c92;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  color: #f44336;
+  transform: translateX(-5px);
+}
+
+.back-link i {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .syllabus-container {
+    width: 90%;
+    padding: 40px 0;
+  }
+
+  .semester-box {
+    padding: 15px;
+  }
+
+  .course-table th,
+  .course-table td {
+    padding: 8px 10px;
+  }
+
+  .course-code {
+    width: 80px;
+  }
+
+  .course-credits {
+    width: 60px;
+  }
+
+  .course-type {
+    width: 100px;
+  }
+}
+
+/* ------------ Department Facilities ------------ */
+.facilities-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.facility-box {
+  flex: 1 1 calc(50% - 20px);
+  min-width: 250px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facility-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.facility-box h4 {
+  color: #f44336;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.facility-box h4 i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.facility-box p {
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .facility-box {
+    flex: 1 1 100%;
+  }
+}

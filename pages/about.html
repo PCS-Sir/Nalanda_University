@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nalanda</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../assets/js/mobile-nav.js"></script>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <!-- <a href="../index.html"><img src="../assets/images/logo.png"></a> -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li class="dropdown">
+                        <a href="academics.html">ACADEMICS</a>
+                        <div class="dropdown-content">
+                            <a href="faculties/science.html">Faculty of Science</a>
+                            <a href="faculties/engineering.html">Faculty of Engineering</a>
+                            <a href="faculties/arts.html">Faculty of Arts</a>
+                            <a href="faculties/law.html">Faculty of Law</a>
+                            <a href="faculties/commerce.html">Faculty of Commerce</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+
+
+    <!------- about us content -------->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>We are the India's Ancient University</h1>
+                <p>Nalanda University stands as a modern revival of the ancient seat of learning, embodying a rich
+                    tradition of academic excellence that dates back to the 5th century. Our institution combines
+                    historical wisdom with contemporary educational approaches, offering diverse programs across
+                    multiple disciplines. With state-of-the-art facilities and a distinguished faculty, we provide an
+                    environment where students from around the world can engage in meaningful research and collaborative
+                    learning.</p>
+                <a href="#" class="hero-btn red-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="../assets/images/about.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-------- footer ---------->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Nalanda University continues the legacy of its ancient predecessor, blending traditional wisdom with modern
+            innovation. We are committed to academic excellence, cultural diversity, and sustainable development through
+            education and research.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+    </section>
+
+
+    <!----JavaScript for toggle menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
